@@ -77,6 +77,16 @@ body{
     padding-top: 12px;
 }
 
+#tabs-top a:hover,
+#tabs-bottom a:hover {
+  background: linear-gradient(to bottom, #4caf50, #2e7d32);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+
 /*============ MAIN ============*/
 
 #main{
@@ -102,6 +112,14 @@ a.info-box{
     margin-top: 12px;
     padding: 1px;
 }
+
+a.info-box:hover {
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transform: scale(1.02);
+  transition: all 0.3s ease-in-out;
+}
+
 
 .info-box img{
     height: 70px;
@@ -132,12 +150,14 @@ a.info-box{
 /*============ INFO BOX FULL ============*/
 
 #info-box-full{
-    background-color: rgba(255, 255, 255, .8);
-    width: 90%;
-    display: block;
-    margin: auto;
-    margin-top: 12px;
-    padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 90%;
+  display: block;
+  margin: 12px auto;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  line-height: 1.6;
 }
 
 #info-box-full img{
@@ -146,6 +166,10 @@ a.info-box{
 
 #info-box-full h3{
     text-align: center;
+    font-size: 2.2rem;
+    color: #2e7d32;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
 /*============ WEATHER ============*/
@@ -188,15 +212,36 @@ textarea{
     border: 1px solid #929292;
 }
 
-.button{
-    display: block;
-    width: 100%;
-    background-color: forestgreen;
-    text-decoration: none;
-    text-align: center;
-    color: white;
-    font-size: 16px;
-    font-weight: 600;
-    margin: 12px 0;
-    padding: 8px 0;
+input:focus,
+textarea:focus {
+  border: 2px solid #4caf50;
+  outline: none;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.6);
+  transition: all 0.3s ease;
 }
+
+
+.button {
+  display: block;
+  width: 100%;
+  background: linear-gradient(90deg, #43e97b, #38f9d7);
+  background-size: 200%;
+  background-position: left;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 12px 0;
+  padding: 8px 0;
+  border: none;
+  border-radius: 6px;
+  transition: background-position 0.5s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button:hover {
+  background-position: right;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
